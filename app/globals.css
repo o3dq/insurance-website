@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --foreground: #000000;
+    --background: #ffffff;
+}
+
+*{
+    cursor: none;
+}
+
+*::selection{
+    background: #00000021;
+}
+
+@font-face {
+    font-family: "Itc Garamond";
+    src: url(./fonts/ITCGaramondStd-LtNarrowIta.otf);
+}
+
+@font-face {
+    font-family: "SF Pro Display Bold";
+    src: url(./fonts/SFPRODISPLAYBOLD.woff);
+}
+
+@font-face {
+    font-family: "SF Pro Display Regular";
+    src: url(./fonts/SFPRODISPLAYREGULAR.woff);
+}
+
+@font-face {
+    font-family: "Instrument Serif";
+    src: url(./fonts/InstrumentSerif.woff2);
+}
+
+body {
+    color: var(--foreground-rgb);
+    background: var(--background);
+    font-family: "SF Pro Display Regular";
+}
+
+.italicx {
+    font-family: "Instrument Serif";
+}
+
+.applebold {
+    font-family: "SF Pro Display Bold";
+}
+
+.apple {
+    font-family: "SF Pro Display Regular";
+}
+
+.neumorphism-effect {
+    background: url(/maam.webp) center / cover no-repeat;
+    box-shadow: 10px 10px 20px #b8b9be, -10px -10px 100px #ffffff;
+    border-radius: 15px;
+}
+
+
+.bg-dot-pattern {
+    background-image: radial-gradient(circle, #00000042 2px, transparent 2px);
+    background-size: 20px 20px;
+}
+
+.halo-bg {
+    background: conic-gradient(
+        from 0deg,
+        #ff0000,
+        #ff7f00,
+        #ffff00,
+        #00ff00,
+        #0000ff,
+        #4b0082,
+        #8f00ff,
+        #ff0000
+    );
+    position: absolute;
+    inset: 0;
+    filter: blur(120px);
+    transform: scale(1.5);
+}
+
+.custom-cursor-point,
+.custom-cursor-circle {
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    position: fixed;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+}
+
+.custom-cursor-point {
+    width: 5px;
+    height: 5px;
+    background: var(--foreground);
+}
+
+.custom-cursor-circle {
+    width: 30px;
+    height: 30px;
+    border: 2px solid hsla(0, 0%, 50%, 0.5);
+}
